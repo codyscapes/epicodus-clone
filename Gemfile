@@ -7,7 +7,7 @@ gem 'uglifier'
 gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
-gem 'bootstrap-sass'
+gem 'zurb-foundation'
 
 group :doc do
   gem 'sdoc', require: false

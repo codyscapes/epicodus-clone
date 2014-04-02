@@ -9,5 +9,15 @@
   <br>
   <label for="lesson_name">Number:</label>
   <input id="lesson_name" name="lesson[number]" type="number">
+  <br>
+
+  <label for="section_id">Section ID:</label>
+  <select id="section_id" name="lesson[section_id]" type="number">
+    <option value="" disabled selected>Select Section</option>
+    <% Section.all.each do |section| %>
+      <option value="<%= section.id %>"><%= section.name %></option>
+    <% end %>
+  </select>
+
   <button>Add Lessons</button>
 </form>
