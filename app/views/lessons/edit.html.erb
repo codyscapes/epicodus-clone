@@ -1,6 +1,6 @@
 <h1>Edit <%= @lesson.name %> </h1>
 
-<form action="/lessons/<%= @lesson.id %>" method="post">
+<form action="/lessons/<%= @lesson.number %>" method="post">
   <input name="_method" type="hidden" value="patch">
   <label for="lesson_name">Name:</label>
   <input id="lesson_name" name="lesson[name]" type="text">

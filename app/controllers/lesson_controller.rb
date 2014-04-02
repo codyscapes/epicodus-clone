@@ -6,7 +6,7 @@ class LessonController < ApplicationController
   end
 
   def show
-    @lesson = Lesson.find(params[:id])
+    @lesson = Lesson.find_by(number: params[:number])
     render('/lessons/show.html.erb')
   end
 
@@ -20,12 +20,12 @@ class LessonController < ApplicationController
   end
 
   def edit
-    @lesson = Lesson.find(params[:id])
+    @lesson = Lesson.find_by(number: params[:number])
     render('/lessons/edit.html.erb')
   end
 
   def update
-    @lesson = Lesson.find(params[:id])
+    @lesson = Lesson.find_by(number: params[:number])
     if @lesson.update(params[:lesson])
       redirect_to('/lessons/')
     else
@@ -34,7 +34,7 @@ class LessonController < ApplicationController
   end
 
   def destroy
-    @lesson = Lesson.find(params[:id])
+    @lesson = Lesson.find_by(number: params[:number])
     @lesson.destroy
     redirect_to('/lessons/')
   end

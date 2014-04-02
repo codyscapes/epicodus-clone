@@ -1,5 +1,6 @@
 class Lesson < ActiveRecord::Base
   validates :name, :presence => true
+  validates :number, :presence => true
 
   def next
     @current_lesson = Lesson.find_by(number: number)
