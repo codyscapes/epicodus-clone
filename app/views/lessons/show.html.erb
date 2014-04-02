@@ -1,0 +1,19 @@
+<h1> <%= @lesson.name %> </h1>
+
+<p><%= @lesson.content  %> </p>
+
+<p>NEXT id: <%= @lesson.next.id %> </p>
+<p>NEXT #: <%= @lesson.next.number %> </p>
+<p>CURRENT id: <%= @lesson.id %> </p>
+<p>CURRENT #: <%= @lesson.number %> </p>
+
+<a href="/lessons/<%= @lesson.id %>/edit">Edit this lesson</a>
+<a href="/lessons/<%= @lesson.id %>/"
+      data-confirm="Are you sure?"
+      data-method="delete"
+      rel="nofollow"> Delete this lesson</a>
+<a style="color:red" href="/lessons/<%= @lesson.next.id %>">NEXT</a>
+<a href="/lessons/<%= @lesson.id %>/edit">Edit this lesson</a>
+
+<a href="/lessons/">Go back</a>
+
