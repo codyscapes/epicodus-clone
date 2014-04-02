@@ -15,7 +15,6 @@ describe Lesson do
       current_lesson = Lesson.create({:name => 'lesson1', :number => 1})
       next_lesson = Lesson.create({:name => 'lesson2', :number => 2})
       last_lesson = Lesson.create({:name => 'lesson10', :number => 10})
-      # puts next_lesson.next.number
       next_lesson.next.should eq last_lesson
     end
   end
@@ -23,7 +22,6 @@ describe Lesson do
     it 'returns the lesson with the next-lowest number than the current lesson' do
       current_lesson = Lesson.create({:name => 'lesson1', :number => 1})
       next_lesson = Lesson.create({:name => 'lesson2', :number => 2})
-      # puts next_lesson.previous.number
       next_lesson.previous.should eq current_lesson
     end
       it 'returns the same lesson when the lesson is 1' do

@@ -2,8 +2,6 @@
 
 <p><%= @lesson.content  %> </p>
 
-<p><%= @lesson.next.inspect %> : NEXT NUM </p>
-<%= @lesson.number %>
 <div>
   <span>
     <a href="/lessons/<%= @lesson.number %>/edit">Edit this lesson</a>
@@ -13,6 +11,7 @@
         rel="nofollow"> Delete this lesson</a>
   </span>
   </br></br>
+   <span><a style="color:red" href="/lessons/<%= @lesson.previous.number %>">PREVIOUS LESSON</a> | <a style="color:red" href="/lessons/<%= @lesson.next.number %>">NEXT LESSON</a> </span>
   </br></br>
   <a href="/lessons/">Go back</a>
 </div>

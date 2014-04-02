@@ -13,10 +13,10 @@ class Lesson < ActiveRecord::Base
   end
 
   def previous
-    if number > Lesson.all.first.number
-      Lesson.all.detect {|lesson| lesson.number < number}
-    else
+    if number == 1
       Lesson.find_by(number: number)
+    else
+      Lesson.all.reverse.detect {|lesson| lesson.number < number}
     end
   end
 
